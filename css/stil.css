@@ -1,0 +1,32 @@
+body{
+	font-family: Verdana, sans-serif;
+	background-color: #009966;
+	color: #ffffff;
+	text-align: center;
+}
+
+button {
+	background-color: #006666;
+	color: #ffffff;
+	border:1px solid #000000;
+	border-radius: 2px;
+	padding: 5px;
+	
+}
+
+input{
+	border: 1px solid #000000;
+	box-shadow: 2px 3px 0px 0px;
+}
+
+#app{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+li{
+	margin-top:10px;
+	margin-bottom:20px;
+	list-style-type:none;
+}
