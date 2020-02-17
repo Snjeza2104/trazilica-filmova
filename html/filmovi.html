@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--VUE.JS za developere -->
+    <script src="../js/script.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="../css/stil.css">
+  </head>
+<body>
+  <div id="app">
+  <h1 id="title" v-bind:title="natpis">{{title}}</h1>
+  
+    <input id="name" type="text" placeholder="Upiši film ili seriju.">
+    <button  v-on:click="mounted">
+      Potraži
+    </button>
+  
+  
+  <div id="content2"></div>
+  </div>
+  <div id="app">
+  <ul id= 'filmovi'>
+
+  </ul>
+</div>
+  <script>
+    new Vue({
+      el:'#app',
+
+       methods: { 
+        mounted: function(event){
+          axios.get(posaljiOdgovor())
+          .then(response => {console.log(response.data);movies(response.data);});
+      
+      },
+    },
+      data:{
+        title:'Pretraživač filmova i serija',
+        natpis: 'Upišite film kako bismo ga mogli dohvatiti iz baze.',
+      } 
+     
+    });
+
+  </script>
+  
+ 
+</body>
+</html>
